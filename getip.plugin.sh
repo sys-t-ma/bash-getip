@@ -2,7 +2,9 @@
 
 getip() {
 	ip -br -c addr show
-	local server='https://ifconfig.me'
-	local ip="$(curl -s $server)"
-	echo "Your public IP is:	$ip"
+	echo "Your public IP is: $(curl -s https://ifconfig.me)"
+}
+
+getpublicip() {
+	echo "$(curl -s https://ifconfig.me)"
 }
